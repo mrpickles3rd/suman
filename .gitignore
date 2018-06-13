@@ -16,7 +16,6 @@ test/.suman/.meta
 *.tgz
 
 ### files
-yarn.lock
 *.DS_Store
 
 ### negation
