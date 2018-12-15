@@ -15,16 +15,17 @@
 # Suman: universal test runner - run tests in the language of your choice.
 
 Designed to run tests written in any language - because Suman runs tests as child processes - just write TAP to stdout
-via the runtime of choice (Golang, Java, Python, Node.js, Bash, whatever). 
+via the runtime of choice (Golang, Java, Python, Node.js, Bash, whatever).
 
 <p>
+
 Suman is intended for unit testing in the browser, for backend and system testing,
 for end-to-end testing with Selenium, etc.
 
 <p>
 Originally designed for TypeScript and Babel transpilation, Suman was generified to support
 compiling from source to target for <i>any</i> language. Suman is written in TypeScript, and has strong support for TS.
-All in all, Suman is a batteries-included test runner which encourages testing best practices through its design. 
+All in all, Suman is a batteries-included test runner which encourages testing best practices through its design.
 Starting with Suman is very easy, but you will find it has extremely powerful features, as your demands increase.
 
 <p>
@@ -32,7 +33,7 @@ Starting with Suman is very easy, but you will find it has extremely powerful fe
 <b>The speed benefits are generally most useful during test development</b>
 
 <p>
-As final points, Suman is designed to be universal and not just another JS framework - it's designed for the long-haul. 
+As final points, Suman is designed to be universal and not just another JS framework - it's designed for the long-haul.
 <p>
 Elegance and utility of reporting output is paramount to the Suman philosophy.
 Reporters are the best place to contribute for people interested in creating beautiful test output.
@@ -51,12 +52,12 @@ As they say (visual) design is what really separates contenders in a world of su
 
 # The Suman Challenge
 
-If you can find a problem that Mocha or AVA has, which Suman does not solve, I will find some reward for you. 
+If you can find a problem that Mocha or AVA has, which Suman does not solve, I will find some reward for you.
 <br>
 Suman was written so that it would suffer from none of the problems that existing test runners have.
 
 
-### &#9658; Disclaimers: 
+### &#9658; Disclaimers:
 >
 > Suman supports Node versions >= 6.0.0, since it makes heavy use of the Proxy class and Symbol primitives.
 >
@@ -73,9 +74,9 @@ Suman is not officially released yet - expected release date ~October 2017.
 Until then, expect bugs, missing docs, etc. Proceed at your own risk :D
 
 
-# &#9658; Documentation 
+# &#9658; Documentation
 
- The Suman docs [sumanjs.org](http://sumanjs.org "Suman Docs")  
+ The Suman docs [sumanjs.org](http://sumanjs.org "Suman Docs")
 
 -----------------------------------------------------------------------------------------
 
@@ -86,7 +87,7 @@ Until then, expect bugs, missing docs, etc. Proceed at your own risk :D
 2. A super powerful test harness that can be used with JavaScript/Node.js tests. This test harness is highly recommended
  and has strong support for TypeScript.
 
-The CLI can be used to run tests in any language; on the other hand, 
+The CLI can be used to run tests in any language; on the other hand,
 the test harness, only works with Node.js and browser based JS.
 
 You do not need the suman CLI to run suman tests. <br>
@@ -102,7 +103,7 @@ They are completely independent, while obviously being designed to work great to
 <div> Everything about Suman is designed for parallelization. </div>
 
 Suman is not just better than test runners in Node.js and JS land - it improves on test runners written
-for other languages as well. This is primarily because the Suman CLI is built so that you can have complete control 
+for other languages as well. This is primarily because the Suman CLI is built so that you can have complete control
 over the parellization of your tests. You can select which tests should exclude each other and run in series,
 and which tests should run in parallel with each other. In the _long run_ however, all tests should run in parallel
 in their own container with their own resources. In the _long long run_, each container should run on its own hardware,
@@ -120,8 +121,8 @@ ___
 
 3. Easily containerize any test process in development, using `suman --ctrz x.js`
 
-4. Imagine you're a senior developer and a more junior developer joins the team, 
-and they write a new test that brings down the whole CI/CD pipeline. With Suman, tests don't directly 
+4. Imagine you're a senior developer and a more junior developer joins the team,
+and they write a new test that brings down the whole CI/CD pipeline. With Suman, tests don't directly
 interact because they are run in separate processes; in Mocha, not so much. Avoid that fateful day.
 Using Suman, it will be clear which test process is causing the fatal problem; but with a single process
 it will not necessarily be clear that it is the junior developer's test which caused the issue.
@@ -133,7 +134,7 @@ it will not necessarily be clear that it is the junior developer's test which ca
 # Suman CLI features
 
 ```console
-$ suman> 
+$ suman>
 ```
 
 <p>
@@ -181,8 +182,8 @@ These are the features for creating tests in JavaScript/TypeScript.
 ##  Suman is a singular test runner focused on Node.js and front-end JavaScript, but is both generic and robust so that it can run tests in any runtime or language
 
 
-Suman is written with Node.js, and is focused on testing Node.js code, 
-but can run tests written in any language, not just JavaScript. This is 
+Suman is written with Node.js, and is focused on testing Node.js code,
+but can run tests written in any language, not just JavaScript. This is
 because it can run tests in child processes and collect results using TAP (Test Anything Protocol, via stdout), IPC, or websockets.
 
 Suman can run a test in any language which exposes a script with a hashbang or a binary entrypoint file (e.g. Golang or C).
@@ -190,7 +191,7 @@ To run Java tests, where Java does not compile to binary and where you cannot pu
 you would need to call Java from a shell script.
 
 It is designed for maximum test performance, via careful parallelization at
-every juncture in the testing process/pipeline. 
+every juncture in the testing process/pipeline.
 
 -----
 
@@ -205,7 +206,7 @@ every juncture in the testing process/pipeline.
 => To avoid any problems with permissions, Suman recommends usage of NVM
 
 <i> For test suites in your project:</i>
-## ```$ cd <project-root> && suman --init``` 
+## ```$ cd <project-root> && suman --init```
 
 * To avoid global NPM modules see: "Local installations only"
 
@@ -217,29 +218,29 @@ however ```$ suman --init``` is the much preferred way to initialized suman in a
 add a directory to your project which you can move to a location of your choosing.
 
 
-### &#9658; Local installations only => 
+### &#9658; Local installations only =>
 
-If you wish to avoid global NPM module installations, we commend you, see: 
- [http://sumanjs.org/tutorial-11-advanced-installation.html/](http://sumanjs.org/tutorial-11-advanced-installation.html "Suman Docs: Advanced Installation") 
+If you wish to avoid global NPM module installations, we commend you, see:
+ [http://sumanjs.org/tutorial-11-advanced-installation.html/](http://sumanjs.org/tutorial-11-advanced-installation.html "Suman Docs: Advanced Installation")
 
 
 ## Example commands
 
-```bash 
+```bash
 
  suman test/**/*.py   # run python tests
- 
+
  suman test/**/*.rb   # run ruby tests
- 
+
  suman test/**/*.sh  test/**/*.go  # run bash and golang tests
- 
+
  suman test/src/*.spec.js --concurrency=6 # run the matching tests, no more than 6 Node.js processes at a time.
 
  suman -w project   # run a set of tests when a project file changes
 
  suman -w tests   # when developing a test, run it upon changes
- 
- 
+
+
 ```
 
 ## The Suman Story
@@ -250,10 +251,10 @@ The human side of this endeavor. (A link to docs will be here soon.);
 ### Suman uses several intelligent pieces of setup:
 
 Global installations of Suman simply look for local installations to run. So if you run the suman command installed via npm install -g suman, that CLI
-will just invoke the local installation of suman in any given project - this prevents any potential 
+will just invoke the local installation of suman in any given project - this prevents any potential
 conflicts if there is a difference between the global/local module versions. Excellent!
 
-If you use NVM and switch between Node.js versions, you can use bash functions (provided by SumanJS) which will 
+If you use NVM and switch between Node.js versions, you can use bash functions (provided by SumanJS) which will
 denecessitate the need for any global installations of Suman at all.
 
 Suman is designed to interop well with the most common libraries in the ecosystem for handling asynchronous code.
@@ -329,9 +330,9 @@ Test.create('example', (baz, http, beforeEach, context, inject, foo, x, beforeAl
 
 # &#9658; Purpose
 
-The purpose of the Suman library is to provide the most sophisticated test runner in the Node.js ecosystem, 
-with a better developer experience, better features, higher performance, improved debuggability, 
-and more expressiveness than AVA, Mocha, and Tape. 
+The purpose of the Suman library is to provide the most sophisticated test runner in the Node.js ecosystem,
+with a better developer experience, better features, higher performance, improved debuggability,
+and more expressiveness than AVA, Mocha, and Tape.
 Suman is a first-rate library and we hope you take the time to compare its capabilities with AVA, Mocha, Tape, TapJS, etc.
 One of the more exciting things about Suman is that it can run tests written in any language; all you have to do
 is output TAP (Test Anything Protocol).
@@ -347,7 +348,7 @@ The primary aims are:
 * Make tests _independent_, so that you can easily run one test at a time (damn you Mocha!).
 * Make debugging your test files easier; this is achieved by allowing for the running of tests with the plain-old node executable,
 this makes Suman tests "node-able"
-* Provide cleaner output, so that developer logging output is not necessarily mixed with test result => 
+* Provide cleaner output, so that developer logging output is not necessarily mixed with test result =>
 achieved by using child processes and ignoring stdout.
 * Add the missing features from Mocha, Tape and AVA, while simplifying portions of the Mocha API and doing
 away with (implicit) global variables.
@@ -355,7 +356,7 @@ away with (implicit) global variables.
  and that transition is as seamless as possible for the developer - you do *not* have to learn a whole new API!
 * Allow for maximum dynamicism so that Suman can match all use cases of users.
 * Allow users to create Suman-runnable tests in any languages - this possibility is created by running tests in child processes.
-Writing tests in the form of shell scripts is something that almost every project could benefit from and now you can run these 
+Writing tests in the form of shell scripts is something that almost every project could benefit from and now you can run these
 tests through your universal test runner - Suman!
 * Composability - Suman tests should be able to run suman tests as child processes, ad inifitem, without hiccups.
 
@@ -395,11 +396,11 @@ which makes automated testing much more difficult.
 much much less likely to occur if tests are split into multiple processes
 * Mocha and Jasmine could not move forward with ES6/ES7 features due to certain software patterns used (globals and complex context binding)
 * a BIG ONE: clean reporting - at the command line, using Mocha and Jasmine, logging/debugging output by the developer would obfuscate the test results, nullifying any advantage of reporting tools. Suman has a simple
-trick up its sleeve to allow for 100% clean reporting for any test or group of tests. 
+trick up its sleeve to allow for 100% clean reporting for any test or group of tests.
 * Mocha and Jasmine could not have certain useful serverside features, because they were also constained by running in the browser.
 * Mocha lacked real ability to do true dynamic testing (meaning, registering a dynamic number of it() test cases) => e.g., make a network call, get X values, create a test case for each.
-* Mocha had confusing and obfuscated context values (values for 'this'), which we have greatly simplified, allowing for the usage of arrow functions, etc 
-* Mocha, Jasmine and Tape lack some other nice features that are implemented by Suman. For example, Tape's ability to pre-load modules using the command line 
+* Mocha had confusing and obfuscated context values (values for 'this'), which we have greatly simplified, allowing for the usage of arrow functions, etc
+* Mocha, Jasmine and Tape lack some other nice features that are implemented by Suman. For example, Tape's ability to pre-load modules using the command line
 before running tests is nowhere near as powerful or easy to use as the dependency injection ability of this library.
 * Using Mocha, Tape, Jasmine you could not easily pass data to tests, to reuse the same test code for different scenarios; Suman allows you to pass dynamic data
 to tests using dependency injection.
@@ -407,10 +408,10 @@ to tests using dependency injection.
 to wrap tests in a function.
 * After writing a few Mocha tests, developers will find it's very difficult to properly run only one test - the "only" feature can help,
 but there are so many bugs that can crop up because of this, especially if you have some global hooks that need to run before your "only" test needs
-to run. Suman solves this problem ridiculously well, because Suman was designed to solve this very problem from the ground up. 
+to run. Suman solves this problem ridiculously well, because Suman was designed to solve this very problem from the ground up.
 
 
-## Suman Philosophy 
+## Suman Philosophy
 
 * "Just works" - no need for addons or plugins, unless you want to write a custom reporter
 * Fail-fast
@@ -429,10 +430,10 @@ both powerful and intuitive to use over the long-run.
 # &#9658; Suman features in detail:
 
 * <b> basics </b>
-    * => tdd/bdd interfaces 
+    * => tdd/bdd interfaces
     * => easy migration from Mocha (it's automated using the --convert option)
-    * => extremely powerful features, while aiming to be straightforward, clean, concise, consistent and accurate; 
-    * => designed with ES6 and ES7 in mind, including Promises, generators and async/await 
+    * => extremely powerful features, while aiming to be straightforward, clean, concise, consistent and accurate;
+    * => designed with ES6 and ES7 in mind, including Promises, generators and async/await
 
 
 * <b> Improved mechanics, syntax and semantics </b>
@@ -442,44 +443,44 @@ both powerful and intuitive to use over the long-run.
     (neither are possible with Mocha, and are very much a missing feature)
     * encapsulation and immutability are utilized much more effectively than with Mocha etc
     * instead of a "grep" option like Mocha's, we have "match" because we are filtering input not output!
-    
-  
+
+
 * <b> Full-blown concurrency</b>
     *  your tests will run much faster, especially if they are doing lots of network I/O
     *  test files are run in separate Node.js processes for speed, isolation and independence
-    *  test cases and hooks in any given suite can be run concurrently, when using asynchronous I/O, 
+    *  test cases and hooks in any given suite can be run concurrently, when using asynchronous I/O,
     using the "parallel" option in your code
     *  capability to control maximum number of processes running at a time (cap it at 6 processes, or 18 processes or whatever)
     *  capability to add constaints to prevent any given pair of tests from running at the same time, (if two different tests access the same
     external resource for example, and you don't want the interaction to cause false negatives).
-       
-       
+
+
 * <b> Improved reporting </b>
     *  using the Suman test runner, you can prevent any logging output from mixing with test reports, by redirecting stdout from the child process(es).
     *  Future effort: Suman includes a built-in web reporter that you can use to share test results with your team, using the Suman server
     *  Future effort: Suman server provides ability to store past test results (backdata) and view test results chronologically with browser to look at trends
-    *  Future effort: testing backdata is stored in a local SQLite database 
+    *  Future effort: testing backdata is stored in a local SQLite database
      which will allow you to run real queries on your test results, and share results with your team.)
-    
+
 * <b> Automatic test execution and/or test transpilation </b>
     * Using ```suman --watch``` you can execute test files or transpile test files as you write them
     * Suman watcher processes run your tests and pipe stdout/stderr to log files which you tail with a terminal or browser window
     * Running tests on the fly is a major portion of the optimal Suman workflow, and makes it all the more fun.
-       
+
 
 * <b> Dynamicism </b>
     * If there's anything you want to do with a test runner, you can do it with Suman
     * Test files themselves allow for all sorts of dynamic behavior, dynamic and asynchronous test case generation, etc
     * You can call tests programmatically and use them as macros
     * Suman tests can create child processes which call Suman tests, etc etc.
-    
-       
+
+
 * <b> Use suman.once.js to run hooks before the test runner starts </b>
     * these hooks can be used to start the services necessary for any given test file to run successfully; they only run once no matter how many tests are run, are only run
     if tests declare so. They offer a lighter weight option than containers for starting up the necessary servers in your backend system.
     *  Your suman.once.js file can augment the behavior of container build scripts etc, to help start up services necessary for testing to commence
-       
-       
+
+
 * <b> Very simple but powerful dependency injection (DI/IoC)</b>
    *  Inject dependencies sourced synchronously or asynchronously
    *  Most useful for injecting values acquired _asynchronously_, such as successful network connections and database values
@@ -487,21 +488,21 @@ both powerful and intuitive to use over the long-run.
    *  Inject any core/"built-in" Node.js module by name, with zero configuration
    *  DI is used throughout the library, and relieves the burden on the developer to remember order of parameters
    *  Inject network values, test dependencies and library dependencies
-    
-    
+
+
 * <b> Test runner tuning </b>
     *  Add contraints to prevent any given pair of tests from running at the same time
     *  Cap the total number of processes running at the same time
     *  Suman 'once' feature gives the developer the option to run checks to see if all necessary network components are live before running any given test
 
-    
+
 * <b> Easy migration from Mocha </b>
     *  Suman includes a command line option to convert whole directories or individual Mocha tests to Suman tests
     *  before/after/beforeEach/afterEach hooks behave just like in Mocha
     *  solid command line tools and better grep facilities than predecessors
     *  skip/only also work like Mocha
-    
-    
+
+
 * <b> Optional but first-rate transpilation features </b>
     * Suman support for tranpilation is first-rate
     * Suman allows you to use "babel-register" to transpile your sources on the fly or transpile a src directory to a target directory
@@ -528,10 +529,10 @@ both powerful and intuitive to use over the long-run.
 ## Suman design
 
 * no implicit globals in test suite files, which were avoided due to the problems they caused for Jasmine and Mocha.
-* Suman uses domains to isolate errors in asynchronous tests and hooks, and currently this is the only solution to this problem at the moment. 
+* Suman uses domains to isolate errors in asynchronous tests and hooks, and currently this is the only solution to this problem at the moment.
 Lab, the test runner for Hapi servers, also uses domains for this same purpose, and using domains allows for much better coding patterns (avoiding globals in
 the suman library.) Domains are facing deprecation, and Suman will replace domains with whichever suitable replacement is chosen by the Node.js core team,
-although after talking with many people near to core, domains will be supported for quite some time. As it stands, _Suman is a perfect use case for domains, 
+although after talking with many people near to core, domains will be supported for quite some time. As it stands, _Suman is a perfect use case for domains,
 as untrapped errors are supposed to be thrown in test code_ (assertions, etc), and the developer experience in this library will be better than any other test library because of the use of domains, as they basically
 guarantee that we can pin an error to a particular test case or hook, no matter where the error originated from.
 
@@ -546,7 +547,7 @@ guarantee that we can pin an error to a particular test case or hook, no matter 
 
 
 ## We can say with confidence that Suman is the most powerful test framework for serverside JavaScript on planet Earth
- => as it gives the developer total control and access to a very large set of features, 
+ => as it gives the developer total control and access to a very large set of features,
  with the explicit goal of being bug-free first, full-featured second.
 
 
@@ -589,21 +590,21 @@ TBD
 
 ## Important aside - How is Suman better than AVA?
 
- It should be abundantly clear why Suman is better than Mocha, but how is Suman better than AVA? 
+ It should be abundantly clear why Suman is better than Mocha, but how is Suman better than AVA?
  (If it's not clear why Suman is better than Mocha then scroll back up).
  Suman borrows some excellent features from Mocha that AVA seems to ignore, including the ability
  to use nested describe blocks for more control and preventing the sharing of scope within tests. AVA basically
- co-opted Tape and added concurrency. Suman co-opted Mocha, added concurrency, better reporting, dependency injection and 
+ co-opted Tape and added concurrency. Suman co-opted Mocha, added concurrency, better reporting, dependency injection and
  less confusing contexts for callbacks. Suman has more powerful facilities for asynchronous testing than AVA due to Mocha/Jasmine-style hooks
  and nested describes. Dependency injection also makes Suman extremely convenient and fun to use, compared to AVA.
- Suman is simply more powerful and richer in features than AVA. 
- 
- * AVA test are not "node-able" - you *cannot* run them with node directly; Suman tests are node-able, which makes 
+ Suman is simply more powerful and richer in features than AVA.
+
+ * AVA test are not "node-able" - you *cannot* run them with node directly; Suman tests are node-able, which makes
  debugging so much easier and intuitive! Note that Suman does make is easy for developers to debug child processes.,
  giving them built-in tools to do so.
- 
+
  ![alt text](https://github.com/ORESoftware/suman-private/blob/dev/images/ava-prob.png)
- 
+
  * AVA requires Babel transpilation, which adds unnecessary complexity for test environments, and is also much slower
  * AVA does not handle errors thrown in asynchronous code gracefully, Suman is much better in this regard.
  * AVA does not feature the nested describes of Mocha or Suman, which limits the expressiveness of the library
@@ -611,25 +612,25 @@ TBD
  * AVA expects you to use its assertion library, whereas Suman will accept usage of any assertion library that
  you are already familiar with.
  * Furthermore, AVA does not prescribe solutions to common test problems -
- 
+
         * registering dynamic test cases (given a dynamic value acquired asynchronously)
         * starting up necessary services before running tests
         * injecting different dependencies into test files
-        
- 
+
+
  Alternatively, with Suman:
 
  *Suman has nested describe blocks, which are imperative for non-trivial tests; a simple but common example is a before hook that you want
  to run only for a certain subset of tests in your test file. The before hook and tests would go in a nested describe block.
  *Babel transpilation is totally optional - you can achieve the async/await pattern with generators and promises alone, you don't need ES7 for this
- *Suman uses domains to correctly map runtime/assertion errors to test cases and hooks, 
+ *Suman uses domains to correctly map runtime/assertion errors to test cases and hooks,
  which provides a much more reliable and well-designed piece of software because it can handle any error that gets thrown, not just assertion errors.
- 
+
 
 ### Contributing - Testing and pull requests
- 
+
  (Please see contributing.md)
- 
+
 
 
 ![alt text](https://raw.githubusercontent.com/sumanjs/suman-docs/master/images/suman.png "Suman Primary Logo")
